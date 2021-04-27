@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { fetchPopularRepos } from '../utils/api';
 
 function LanguagesNav({selected, onUpdateLanguage}){
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
