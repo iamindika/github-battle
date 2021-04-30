@@ -84,6 +84,20 @@ PlayerInput.propTypes ={
   label: PropTypes.string.isRequired
 }
 
+function PlayerPreview({username, onReset, label}) {
+  return (
+    <div className='column player' >
+      {username}
+    </div>
+  )
+}
+
+PlayerPreview.propTypes = {
+  username: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired
+}
+
 export default class Battle extends React.Component {
   constructor(props) {
     super(props);
@@ -112,15 +126,25 @@ export default class Battle extends React.Component {
           <h1 className='center-text header-lg'>Players</h1>
           <div className='row space-around'>
             {playerOne === null 
-              && <PlayerInput
+              ? <PlayerInput
                   label='Player One'
                   onSubmit={(player) => this.handleSubmit('playerOne', player)} 
                 />
+              : <PlayerPreview
+                  username={playerOne}
+                  label='Player One'
+                  onReset={() => ({})}
+                />
             }
             {playerTwo === null 
-              && <PlayerInput
+              ? <PlayerInput
                   label='Player Two'
                   onSubmit={(player) => this.handleSubmit('playerTwo', player)} 
+                />
+              : <PlayerPreview
+                  username={playerTwo}
+                  label='Player Two'
+                  onReset={() => ({})}
                 />
             }
           </div>
