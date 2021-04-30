@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUserFriends, FaFighterJet, FaTrophy } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 function Instructions () {
   return (
@@ -88,6 +89,8 @@ export default class Battle extends React.Component {
     return (
       <React.Fragment>
         <Instructions />
+
+        <PlayerInput label="label!" onSubmit={(value) => console.log(value)} />
       </React.Fragment>
     )
   }
