@@ -32,7 +32,7 @@ LanguagesNav.propTypes = {
 
 function ReposGrid({repos}){
   return (
-    <ul>
+    <ul className='grid space-around'>
       {repos.map((repo, index) => {
         const {name, owner, html_url, stargazers_count, forks, open_issues} = repo;
         const {login, avatar_url} = owner;
