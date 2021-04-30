@@ -29,6 +29,18 @@ LanguagesNav.propTypes = {
   onUpdateLanguage: PropTypes.func.isRequired
 }
 
+function ReposGrid({repos}){
+  return (
+    <ul>
+      <pre>{JSON.stringify(repos, null, 2)}</pre>
+    </ul>
+  )
+}
+
+ReposGrid.propTypes = {
+  repos: PropTypes.array.isRequired
+}
+
 export default class Popular extends React.Component {
   constructor(props){
     super(props);
@@ -94,7 +106,7 @@ export default class Popular extends React.Component {
         {error && <p>{error}</p>}
 
         {repos[selectedLanguage] 
-          && <pre>{JSON.stringify(repos[selectedLanguage], null, 2)}</pre>}
+          && <ReposGrid repos={repos[selectedLanguage]} />}
       </React.Fragment>
     )
   }
