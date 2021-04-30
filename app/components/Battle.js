@@ -78,6 +78,11 @@ class PlayerInput extends React.Component {
   }
 }
 
+PlayerInput.propTypes ={
+  onSubmit: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired
+}
+
 export default class Battle extends React.Component {
   render() {
     return (
