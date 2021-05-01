@@ -58,6 +58,9 @@ export default class Results extends React.Component {
             src={winner.profile.avatar_url}
             alt={`Avatar for ${winner.profile.login}`} 
           />
+          <h4 className='center-text'>
+            Score: {winner.score.toLocaleString()}
+          </h4>
           <h2 className='center-text'>
             <a className='link' href={winner.profile.html_url}>
               {winner.profile.login}
@@ -99,6 +102,9 @@ export default class Results extends React.Component {
             src={loser.profile.avatar_url}
             alt={`Avatar for ${loser.profile.login}`} 
           />
+          <h4 className='center-text'>
+            Score: {loser.score.toLocaleString()}
+          </h4>
           <h2 className='center-text'>
             <a className='link' href={loser.profile.html_url}>
               {loser.profile.login}
