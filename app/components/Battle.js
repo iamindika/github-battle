@@ -181,9 +181,9 @@ export default class Battle extends React.Component {
           </div>
           { playerOne && playerTwo && (
               <button
-                
-              >
 
+              >
+                SELECT * FROM USERS;
               </button>
             )
           }
