@@ -34,6 +34,11 @@ function getRepos(username) {
     });
 }
 
+
+function calculateScore(followers, repos) {
+  return (followers * 3) + ;
+}
+
 function getUserData(player) {
   return Promise.all([
     getProfile(player),
