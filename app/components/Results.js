@@ -47,9 +47,27 @@ export default class Results extends React.Component {
     }
 
     return (
-      <div>
-        Results
-        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+      <div className='grid space-around container-sm'>
+        <div className='card bg-light'>
+          <h4 className='header-lg center-text'>
+            {winner.score === loser.score ? 'Tie' : 'Winner'}
+          </h4>
+          <img
+            className= 'avatar'
+            src={winner.profile.avatar_url}
+            alt={`Avatar for ${winner.profile.login}`} 
+          />
+        </div>
+        <div className='card bg-light'>
+          <h4 className='header-lg center-text'>
+            {winner.score === loser.score ? 'Tie' : 'Loser'}
+          </h4>
+          <img
+            className= 'avatar'
+            src={loser.profile.avatar_url}
+            alt={`Avatar for ${loser.profile.login}`} 
+          />
+        </div>
       </div>
     )
   }
