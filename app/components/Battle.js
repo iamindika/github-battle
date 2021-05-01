@@ -181,9 +181,10 @@ export default class Battle extends React.Component {
           </div>
           { playerOne && playerTwo && (
               <button
-
+                className='btn dark-btn btn-space'
+                onClick={() => this.setState({battle: true})}
               >
-                SELECT * FROM USERS;
+                Battle
               </button>
             )
           }
