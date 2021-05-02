@@ -18,7 +18,7 @@ export default class Loading extends React.Component {
   }
 
   componentWillUnmount () {
-    window.clearIntervat(this.interval);
+    window.clearInterval(this.interval);
   }
 
   render () {
