@@ -17,7 +17,7 @@ export default class Loading extends React.Component {
     super (props);
 
     this.state = {
-      content: 'Loading'
+      content: this.props.text
     };
   }
   
