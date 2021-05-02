@@ -72,7 +72,7 @@ export default class Results extends React.Component {
   }
 
   render() {
-    const { winner, loser, error, loading } = this.state;
+    const { winner, loser, error, loading, onReset } = this.state;
 
     if (loading === true) {
       return <p>LOADING</p>;
