@@ -27,9 +27,9 @@ export default function Card ({ header, subheader, avatar, href, name}) {
 }
 
 Card.propTypes = {
-  header = PropTypes.string.isRequired,
-  subheader = PropTypes.string, 
-  avatar = PropTypes.string.isRequired,
+  header : PropTypes.string.isRequired,
+  subheader : PropTypes.string, 
+  avatar : PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired
 }
