@@ -2,6 +2,7 @@ import React from 'react';
 import { battle } from '../utils/api';
 import { FaCompass, FaBriefcase, FaUsers, FaUserFriends, FaUser } from 'react-icons/fa';
 import Card from './Card';
+import PropTypes from 'prop-types';
 
 function ProfileList ({ profile }) {
   return (
@@ -32,6 +33,10 @@ function ProfileList ({ profile }) {
       </li>
     </ul>
   )
+}
+
+ProfileList.propTypes = {
+  profile: PropTypes.object.isRequired
 }
 
 export default class Results extends React.Component {
