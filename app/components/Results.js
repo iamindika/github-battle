@@ -72,7 +72,7 @@ export default class Results extends React.Component {
   }
 
   render() {
-    const { winner, loser, error, loading, onReset } = this.state;
+    const { winner, loser, error, loading } = this.state;
 
     if (loading === true) {
       return <p>LOADING</p>;
@@ -111,4 +111,10 @@ export default class Results extends React.Component {
       </div>
     )
   }
+}
+
+Results.propTypes = {
+  playerOne: PropTypes.string.isRequired,
+  playerTwo: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired
 }
