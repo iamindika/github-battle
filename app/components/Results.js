@@ -3,6 +3,12 @@ import { battle } from '../utils/api';
 import { FaCompass, FaBriefcase, FaUsers, FaUserFriends, FaUser } from 'react-icons/fa';
 import Card from './Card';
 
+function ProfileList ({ profile }) {
+  return (
+    
+  )
+}
+
 export default class Results extends React.Component {
   constructor(props) {
     super(props)
