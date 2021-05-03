@@ -65,3 +65,6 @@ export default class Tooltip extends React.Component {
   }
 }
 
+Tooltip.propTypes = {
+  text: PropTypes.string.isRequired
+}
