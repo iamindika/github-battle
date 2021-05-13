@@ -21,3 +21,5 @@ Install dependencies with `npm install`.
 ```sh
 npm start
 ```
+
+## Hosted on Netlify @ [stoic-banach-a8cb9b](https://stoic-banach-a8cb9b.netlify.app)
